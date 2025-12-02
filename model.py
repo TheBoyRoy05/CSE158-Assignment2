@@ -117,3 +117,81 @@ def evaluate_model(test_samples, topFifty):
         'recall': recall,
         'f1_score': f1_score
     }
+
+def jaccard_similarity(set1, set2):
+    # compute jaccard sim
+    if not set1 or not set2:
+        return 0
+    
+    numer = len(set1.intersection(set2))
+    denom = len(set1.union(set2))
+
+    if denom > 0:
+        return numer/denom
+    return 0
+
+def find_similar_users(user_id, user_businesses, k=10):
+    # get k most similar users based on reviewed businesses
+    target_businesses = user_businesses.get(user_id, set())
+    if not target_businesses:
+        return []
+    
+    similarities = []
+    for other_user, other_businesses in user_businesses.items():
+        if other_user == user_id:
+            continue
+        
+        sim = jaccard_similarity(target_businesses, other_businesses)
+        if sim > 0:
+            similarities.append((sim, other_user))
+    
+    similarities.sort(reverse=True)
+    return similarities[:k]
+
+
+def collaborative_filtering_predict(test_samples, user_businesses, similarity_threshold=0.1):
+    # predicts yes if similar users have reviewed the business
+    predictions = set()
+    
+    for user_id, business_id, _ in test_samples:
+        # get similar users
+        similar_users = find_similar_users(user_id, user_businesses, k=10)
+        
+        # check if similar users reviewed this business
+        for sim_score, similar_user in similar_users:
+            if sim_score < similarity_threshold:
+                break
+            
+            if business_id in user_businesses.get(similar_user, set()):
+                predictions.add((user_id, business_id))
+                break
+    
+    return predictions
+
+def evaluate_model_tuples(test_samples, predictions):
+    # evaluate model
+    TP = FP = TN = FN = 0
+    
+    for user_id, business_id, label in test_samples:
+        pred = 1 if (user_id, business_id) in predictions else 0
+        
+        if label == 1 and pred == 1:
+            TP += 1
+        elif label == 1 and pred == 0:
+            FN += 1
+        elif label == 0 and pred == 1:
+            FP += 1
+        elif label == 0 and pred == 0:
+            TN += 1
+    
+    accuracy = (TP + TN) / (TP + TN + FP + FN) if (TP + TN + FP + FN) > 0 else 0
+    precision = TP / (TP + FP) if (TP + FP) > 0 else 0
+    recall = TP / (TP + FN) if (TP + FN) > 0 else 0
+    f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+    
+    return {
+        'accuracy': accuracy,
+        'precision': precision,
+        'recall': recall,
+        'f1_score': f1_score
+    }
