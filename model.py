@@ -1,7 +1,7 @@
 import random
 from collections import defaultdict
 
-# 
+# create validation set
 def create_validation_set(reviews, meta, val_size=10000):
     random.seed(14)
 
