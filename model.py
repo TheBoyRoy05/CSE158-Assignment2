@@ -106,17 +106,24 @@ def evaluate_baseline_model(test_samples, topFifty):
         elif label == 0 and pred == 0:
             TN += 1
         
-    accuracy = (TP + TN) / (TP + TN + FP + FN) if (TP + TN + FP + FN) > 0 else 0
-    precision = TP / (TP + FP) if (TP + FP) > 0 else 0
-    recall = TP / (TP + FN) if (TP + FN) > 0 else 0
-    f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+    accuracy = (TP + TN) / (TP + TN + FP + FN) if (TP + TN + FP + FN) else 0
+    precision = TP / (TP + FP) if (TP + FP) else 0
+    recall = TP / (TP + FN) if (TP + FN) else 0
+    f1_score = 2 * precision * recall / (precision + recall) if (precision + recall) else 0
 
     return {
         'accuracy': accuracy,
         'precision': precision,
         'recall': recall,
-        'f1_score': f1_score
+        'f1_score': f1_score,
+        'confusion_matrix': {
+            'TP': TP,
+            'FP': FP,
+            'FN': FN,
+            'TN': TN
+        }
     }
+
 
 def jaccard_similarity(set1, set2):
     # compute jaccard sim
@@ -200,5 +207,11 @@ def evaluate_filtering_model(test_samples, predictions):
         'accuracy': accuracy,
         'precision': precision,
         'recall': recall,
-        'f1_score': f1_score
+        'f1_score': f1_score,
+        'confusion_matrix': {
+            'TP': TP,
+            'FP': FP,
+            'FN': FN,
+            'TN': TN
+        }
     }
