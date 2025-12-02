@@ -91,7 +91,7 @@ def baseline_predict(sorted_businesses, total_reviews, thresh=0.5):
 
     return topFifty
 
-def evaluate_model(test_samples, topFifty):
+def evaluate_baseline_model(test_samples, topFifty):
     TP = FP = TN = FN = 0
 
     for user_id, business_id, label in test_samples:
@@ -149,26 +149,33 @@ def find_similar_users(user_id, user_businesses, k=10):
     return similarities[:k]
 
 
-def collaborative_filtering_predict(test_samples, user_businesses, similarity_threshold=0.1):
+def collaborative_filtering_predict(test_samples, user_businesses, 
+                                   similarity_threshold=0.01, 
+                                   min_similar_reviews=1):
     # predicts yes if similar users have reviewed the business
     predictions = set()
     
     for user_id, business_id, _ in test_samples:
         # get similar users
-        similar_users = find_similar_users(user_id, user_businesses, k=10)
+        similar_users = find_similar_users(user_id, user_businesses, k=20)
         
-        # check if similar users reviewed this business
+        # count num similar users who reviewed the business
+        similar_review_count = 0
         for sim_score, similar_user in similar_users:
+            # low threshold -> keep max num similar users
             if sim_score < similarity_threshold:
                 break
             
             if business_id in user_businesses.get(similar_user, set()):
-                predictions.add((user_id, business_id))
-                break
+                similar_review_count += 1
+        
+        # predict yes if enough similar users reviewed the business
+        if similar_review_count >= min_similar_reviews:
+            predictions.add((user_id, business_id))
     
     return predictions
 
-def evaluate_model_tuples(test_samples, predictions):
+def evaluate_filtering_model(test_samples, predictions):
     # evaluate model
     TP = FP = TN = FN = 0
     
