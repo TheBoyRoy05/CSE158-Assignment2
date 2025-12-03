@@ -7312,6 +7312,7 @@ a.anchor-link {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -7517,14 +7518,14 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">gzip</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LogNorm</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-<span class="kn">import</span> <span class="nn">model</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gzip</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNorm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">model</span>
 </pre></div>
 </div>
 </div>
@@ -7537,7 +7538,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="CSE-158-Assignment-2">CSE 158 Assignment 2<a class="anchor-link" href="#CSE-158-Assignment-2">¶</a></h1><h3 id="Issac,-Rushi,-Ty,-Noah">Issac, Rushi, Ty, Noah<a class="anchor-link" href="#Issac,-Rushi,-Ty,-Noah">¶</a></h3><p>This project analyzes Google Local business data to predict whether a user will review a business. We use exploratory data analysis (EDA) to understand patterns in user behavior, business characteristics, and review distributions. We build and evaluate multiple models, including baseline popularity-based approaches and collaborative filtering, to predict user-business review interactions. The models are evaluated using standard classification metrics (accuracy, precision, recall, F1-score) to identify the most effective approach for this prediction task.</p>
+<h1 id="CSE-158-Assignment-2:-Predicting-User-Business-Interactions-in-San-Diego">CSE 158 Assignment 2: Predicting User-Business Interactions in San Diego<a class="anchor-link" href="#CSE-158-Assignment-2:-Predicting-User-Business-Interactions-in-San-Diego">¶</a></h1><h3 id="Issac,-Rushi,-Ty,-Noah">Issac, Rushi, Ty, Noah<a class="anchor-link" href="#Issac,-Rushi,-Ty,-Noah">¶</a></h3><p>This project analyzes Google Local business data to predict whether a user will review a business. We use exploratory data analysis (EDA) to understand patterns in user behavior, business characteristics, and review distributions. We build and evaluate multiple models, including baseline popularity-based approaches and collaborative filtering, to predict user-business review interactions. The models are evaluated using standard classification metrics (accuracy, precision, recall, F1-score) to identify the most effective approach for this prediction task.</p>
 </div>
 </div>
 </div>
@@ -7749,8 +7750,8 @@ a.anchor-link {
     <span class="n">lon</span> <span class="o">=</span> <span class="n">lon</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span> <span class="n">lat</span> <span class="o">=</span> <span class="n">lat</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">contextily</span> <span class="k">as</span> <span class="nn">ctx</span>
-    <span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Transformer</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">contextily</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ctx</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">pyproj</span><span class="w"> </span><span class="kn">import</span> <span class="n">Transformer</span>
     <span class="n">has_ctx</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="n">has_ctx</span> <span class="o">=</span> <span class="kc">False</span>
@@ -8107,8 +8108,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">f_oneway</span><span class="p">,</span> <span class="n">kruskal</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">f_oneway</span><span class="p">,</span> <span class="n">kruskal</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">price_rating_groups</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">price_level</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'$'</span><span class="p">,</span> <span class="s1">'$$'</span><span class="p">,</span> <span class="s1">'$$$'</span><span class="p">,</span> <span class="s1">'$$$$'</span><span class="p">]:</span>
@@ -8319,7 +8320,7 @@ Effect size (η²): 0.0024 - Small effect
 <div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">f_oneway</span><span class="p">,</span> <span class="n">kruskal</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">f_oneway</span><span class="p">,</span> <span class="n">kruskal</span>
 
 <span class="n">category_rating_groups</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ratings</span> <span class="k">if</span> <span class="n">r</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
@@ -8598,11 +8599,11 @@ Effect size (η²): 0.0290 - Medium effect
 <div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
 
 <span class="c1"># create validation set</span>
-<span class="k">def</span> <span class="nf">create_validation_set</span><span class="p">(</span><span class="n">reviews</span><span class="p">,</span> <span class="n">meta</span><span class="p">,</span> <span class="n">val_size</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_validation_set</span><span class="p">(</span><span class="n">reviews</span><span class="p">,</span> <span class="n">meta</span><span class="p">,</span> <span class="n">val_size</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
     <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
 
     <span class="n">all_users</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">rev</span><span class="p">[</span><span class="s2">"user_id"</span><span class="p">]</span> <span class="k">for</span> <span class="n">rev</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">))</span>
@@ -8618,7 +8619,7 @@ Effect size (η²): 0.0290 - Medium effect
     <span class="k">return</span> <span class="n">reviews_valid</span><span class="p">,</span> <span class="n">meta_valid</span>
 
 <span class="c1"># generate positive/negative samples for model training</span>
-<span class="k">def</span> <span class="nf">generate_samples</span><span class="p">(</span><span class="n">reviews</span><span class="p">,</span> <span class="n">meta</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_samples</span><span class="p">(</span><span class="n">reviews</span><span class="p">,</span> <span class="n">meta</span><span class="p">):</span>
     <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
 
     <span class="n">user_businesses</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
@@ -8650,7 +8651,7 @@ Effect size (η²): 0.0290 - Medium effect
     <span class="k">return</span> <span class="n">pos</span><span class="p">,</span> <span class="n">neg</span>
 
 <span class="c1"># split data into train/test sets</span>
-<span class="k">def</span> <span class="nf">train_test_split</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">neg</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">train_test_split</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">neg</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span>
     <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
 
     <span class="n">all_samples</span> <span class="o">=</span> <span class="p">[(</span><span class="n">user</span><span class="p">,</span> <span class="n">business</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">user</span><span class="p">,</span> <span class="n">business</span> <span class="ow">in</span> <span class="n">pos</span><span class="p">]</span> <span class="o">+</span> <span class="p">[(</span><span class="n">user</span><span class="p">,</span> <span class="n">business</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">user</span><span class="p">,</span> <span class="n">business</span> <span class="ow">in</span> <span class="n">neg</span><span class="p">]</span>
@@ -8686,9 +8687,9 @@ Effect size (η²): 0.0290 - Medium effect
 <div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">gzip</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gzip</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
 
 <span class="n">reviews</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -8772,7 +8773,7 @@ otherwise. The function then calculates the accuracy, precision, recall, and f1 
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># build baseline model</span>
-<span class="k">def</span> <span class="nf">baseline_model</span><span class="p">(</span><span class="n">train_samples</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">baseline_model</span><span class="p">(</span><span class="n">train_samples</span><span class="p">):</span>
     <span class="n">business_popularity</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">business_id</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">train_samples</span><span class="p">:</span>
@@ -8785,7 +8786,7 @@ otherwise. The function then calculates the accuracy, precision, recall, and f1 
     <span class="k">return</span> <span class="n">sorted_businesses</span>
 
 <span class="c1"># predict yes for top 50% popular businesses</span>
-<span class="k">def</span> <span class="nf">baseline_predict</span><span class="p">(</span><span class="n">sorted_businesses</span><span class="p">,</span> <span class="n">total_reviews</span><span class="p">,</span> <span class="n">thresh</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">baseline_predict</span><span class="p">(</span><span class="n">sorted_businesses</span><span class="p">,</span> <span class="n">total_reviews</span><span class="p">,</span> <span class="n">thresh</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
     <span class="n">topFifty</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
     <span class="n">cum_revs</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">threshold_reviews</span> <span class="o">=</span> <span class="n">total_reviews</span> <span class="o">*</span> <span class="n">thresh</span>
@@ -8799,7 +8800,7 @@ otherwise. The function then calculates the accuracy, precision, recall, and f1 
 
     <span class="k">return</span> <span class="n">topFifty</span>
 
-<span class="k">def</span> <span class="nf">evaluate_baseline_model</span><span class="p">(</span><span class="n">test_samples</span><span class="p">,</span> <span class="n">topFifty</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">evaluate_baseline_model</span><span class="p">(</span><span class="n">test_samples</span><span class="p">,</span> <span class="n">topFifty</span><span class="p">):</span>
     <span class="n">TP</span> <span class="o">=</span> <span class="n">FP</span> <span class="o">=</span> <span class="n">TN</span> <span class="o">=</span> <span class="n">FN</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">for</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">business_id</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">test_samples</span><span class="p">:</span>
@@ -8912,7 +8913,7 @@ that business.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">jaccard_similarity</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span> <span class="n">set2</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">jaccard_similarity</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span> <span class="n">set2</span><span class="p">):</span>
     <span class="c1"># compute jaccard sim</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">set1</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">set2</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
@@ -8924,7 +8925,7 @@ that business.</p>
         <span class="k">return</span> <span class="n">numer</span><span class="o">/</span><span class="n">denom</span>
     <span class="k">return</span> <span class="mi">0</span>
 
-<span class="k">def</span> <span class="nf">find_similar_users</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">user_businesses</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_similar_users</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">user_businesses</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="c1"># get k most similar users based on reviewed businesses</span>
     <span class="n">target_businesses</span> <span class="o">=</span> <span class="n">user_businesses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="nb">set</span><span class="p">())</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">target_businesses</span><span class="p">:</span>
@@ -8943,7 +8944,7 @@ that business.</p>
     <span class="k">return</span> <span class="n">similarities</span><span class="p">[:</span><span class="n">k</span><span class="p">]</span>
 
 
-<span class="k">def</span> <span class="nf">collaborative_filtering_predict</span><span class="p">(</span><span class="n">test_samples</span><span class="p">,</span> <span class="n">user_businesses</span><span class="p">,</span> 
+<span class="k">def</span><span class="w"> </span><span class="nf">collaborative_filtering_predict</span><span class="p">(</span><span class="n">test_samples</span><span class="p">,</span> <span class="n">user_businesses</span><span class="p">,</span> 
                                    <span class="n">similarity_threshold</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> 
                                    <span class="n">min_similar_reviews</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="c1"># predicts yes if similar users have reviewed the business</span>
@@ -8969,7 +8970,7 @@ that business.</p>
     
     <span class="k">return</span> <span class="n">predictions</span>
 
-<span class="k">def</span> <span class="nf">evaluate_filtering_model</span><span class="p">(</span><span class="n">test_samples</span><span class="p">,</span> <span class="n">predictions</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">evaluate_filtering_model</span><span class="p">(</span><span class="n">test_samples</span><span class="p">,</span> <span class="n">predictions</span><span class="p">):</span>
     <span class="c1"># evaluate model</span>
     <span class="n">TP</span> <span class="o">=</span> <span class="n">FP</span> <span class="o">=</span> <span class="n">TN</span> <span class="o">=</span> <span class="n">FN</span> <span class="o">=</span> <span class="mi">0</span>
     
@@ -9072,11 +9073,11 @@ that business.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">joblib</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">joblib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
 
 
 <span class="n">TOP_K_CATEGORIES</span> <span class="o">=</span> <span class="mi">100</span>
@@ -9100,7 +9101,7 @@ that business.</p>
 <span class="n">category_to_idx</span> <span class="o">=</span> <span class="p">{</span><span class="n">cat</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cat</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">top_categories</span><span class="p">)}</span>
 
 
-<span class="k">def</span> <span class="nf">price_to_num</span><span class="p">(</span><span class="n">price</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">price_to_num</span><span class="p">(</span><span class="n">price</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">price</span> <span class="o">==</span> <span class="s2">"$"</span><span class="p">:</span> <span class="k">return</span> <span class="mi">1</span>
     <span class="k">if</span> <span class="n">price</span> <span class="o">==</span> <span class="s2">"$$"</span><span class="p">:</span> <span class="k">return</span> <span class="mi">2</span>
     <span class="k">if</span> <span class="n">price</span> <span class="o">==</span> <span class="s2">"$$$"</span><span class="p">:</span> <span class="k">return</span> <span class="mi">3</span>
@@ -9169,7 +9170,7 @@ that business.</p>
         <span class="n">prof</span><span class="p">[</span><span class="s2">"cat_pref"</span><span class="p">]</span> <span class="o">/=</span> <span class="n">total</span>
 
 
-<span class="k">def</span> <span class="nf">create_pairs</span><span class="p">(</span><span class="n">reviews_split</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_pairs</span><span class="p">(</span><span class="n">reviews_split</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">[(</span><span class="n">r</span><span class="p">[</span><span class="s2">"user_id"</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">"gmap_id"</span><span class="p">],</span> <span class="n">label</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">reviews_split</span><span class="p">]</span>
 
 <span class="n">pos_test</span> <span class="o">=</span> <span class="n">create_pairs</span><span class="p">(</span><span class="n">reviews_test</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -9177,7 +9178,7 @@ that business.</p>
 <span class="n">all_users_test</span> <span class="o">=</span> <span class="nb">list</span><span class="p">({</span><span class="n">u</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span> <span class="ow">in</span> <span class="n">pos_test</span><span class="p">})</span>
 <span class="n">all_biz_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">meta</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
-<span class="k">def</span> <span class="nf">fast_negative_sampling</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">n_pos</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fast_negative_sampling</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">n_pos</span><span class="p">):</span>
     <span class="n">n_neg</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n_pos</span> <span class="o">*</span> <span class="n">NEG_POS_RATIO</span><span class="p">)</span>
     <span class="n">sampled_users</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n_neg</span><span class="p">)</span>
     <span class="n">sampled_biz</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">all_biz_ids</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n_neg</span><span class="p">)</span>
@@ -9207,7 +9208,7 @@ that business.</p>
     <span class="n">user_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="o">+</span><span class="n">TOP_K_CATEGORIES</span><span class="p">:</span><span class="mi">2</span><span class="o">+</span><span class="n">TOP_K_CATEGORIES</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">uf</span><span class="p">[</span><span class="s2">"home_lat"</span><span class="p">],</span> <span class="n">uf</span><span class="p">[</span><span class="s2">"home_lon"</span><span class="p">]])</span>
 
 
-<span class="k">def</span> <span class="nf">fast_haversine</span><span class="p">(</span><span class="n">lat1</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fast_haversine</span><span class="p">(</span><span class="n">lat1</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon2</span><span class="p">):</span>
     <span class="n">lat1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lat1</span><span class="p">);</span> <span class="n">lon1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lon1</span><span class="p">)</span>
     <span class="n">lat2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lat2</span><span class="p">);</span> <span class="n">lon2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lon2</span><span class="p">)</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">(</span>
@@ -9217,7 +9218,7 @@ that business.</p>
     <span class="k">return</span> <span class="mi">6371</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 
 
-<span class="k">def</span> <span class="nf">fast_make_matrix</span><span class="p">(</span><span class="n">pairs</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fast_make_matrix</span><span class="p">(</span><span class="n">pairs</span><span class="p">):</span>
     <span class="n">users</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">u</span> <span class="k">for</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">])</span>
     <span class="n">bizs</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">b</span> <span class="k">for</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">])</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">y</span> <span class="k">for</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
@@ -9339,8 +9340,8 @@ Evaluation Metrics:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [79]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Extract counts</span>
 <span class="n">cm</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s2">"confusion_matrix"</span><span class="p">]</span>
@@ -9438,8 +9439,8 @@ Evaluation Metrics:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [80]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Extract collaborative filtering results</span>
 <span class="n">cm</span> <span class="o">=</span> <span class="n">results_collab</span><span class="p">[</span><span class="s2">"confusion_matrix"</span><span class="p">]</span>
@@ -9531,9 +9532,9 @@ Evaluation Metrics:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [81]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">accuracy_score</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">accuracy_score</span>
 
 <span class="c1"># Confusion matrix</span>
 <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">preds</span><span class="p">)</span>
@@ -9604,7 +9605,7 @@ Evaluation Metrics:
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>We benchmark our method against two baselines. The first is a <strong>trivial heuristic baseline</strong> that predicts “yes” if a business falls within the top 50% most-reviewed businesses; this yields <strong>50.5% accuracy</strong> and an <strong>F1 of 0.35</strong>, showing near-random predictive power. The second baseline is a <strong>collaborative filtering model</strong>, which predicts a positive interaction when a similar user has reviewed the same business. Although more informed, this method suffers from sparsity and produces <strong>70.9% accuracy</strong> and an <strong>F1 of 0.61</strong>, with notably low recall due to missing similar neighbors. These baselines provide meaningful reference points for understanding what “improvement” actually looks like in this domain.</p>
-<p>Our full evaluation pipeline is implemented in code that reconstructs the test set, rebuilds user and business feature matrices, generates predictions using the trained model, and computes all metrics through <code>sklearn</code> utilities such as <code>confusion_matrix</code>, <code>precision_score</code>, <code>recall_score</code>, and <code>f1_score</code>. The resulting confusion-matrix plots illustrate the model’s performance clearly. The <strong>Random Forest model</strong>—leveraging business metadata, user preferences, geographic distance, and category-preference alignment—outperforms both baselines across every major metric, achieving <strong>73.1% accuracy</strong>, <strong>0.85 precision</strong>, <strong>0.56 recall</strong>, and an <strong>F1 of 0.67</strong>. These quantitative gains demonstrate that the Random Forest captures more meaningful structure in user–business interactions and is the strongest model for this task.</p>
+<p>Our full evaluation pipeline is implemented in code that reconstructs the test set, rebuilds user and business feature matrices, generates predictions using the trained model, and computes all metrics through <code>sklearn</code> utilities such as <code>confusion_matrix</code>, <code>precision_score</code>, <code>recall_score</code>, and <code>f1_score</code>. The resulting confusion-matrix plots illustrate the model’s performance clearly. The <strong>Random Forest model</strong>, leveraging business metadata, user preferences, geographic distance, and category-preference alignment, outperforms both baselines across every major metric, achieving <strong>73.1% accuracy</strong>, <strong>0.85 precision</strong>, <strong>0.56 recall</strong>, and an <strong>F1 of 0.67</strong>. These quantitative gains demonstrate that the Random Forest captures more meaningful structure in user–business interactions and is the strongest model for this task.</p>
 </div>
 </div>
 </div>
@@ -9615,10 +9616,7 @@ Evaluation Metrics:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Conclusion-and-Discussion">Conclusion and Discussion<a class="anchor-link" href="#Conclusion-and-Discussion">¶</a></h2><p>The Google Local Reviews dataset and its variants have been widely used in research on recommender systems, user modeling, and multimodal learning. Prior work using this dataset has focused primarily on understanding how users interact with businesses through reviews, and how text, images, and metadata can be leveraged to improve recommendations and explanations. For example, Li, Shang, and McAuley in 2022 introduced UCTopic, a framework that uses contrastive learning to extract high-quality phrase representations from review text, enabling improved topic mining and downstream recommendation tasks. Similarly, Yan et al, also in 2022, used the dataset to develop multimodal explanation models that combine images, text, and metadata to justify recommendations and increase transparency.</p>
-<p>Although prior work often focuses on rating prediction, topic modeling, or explanation generation, many studies in the recommendation systems literature have approached tasks similar to ours, predicting whether a user will engage with a particular item. This formulation is typically known as binary implicit feedback modeling, where the presence of an interaction (such as a review, click, or purchase) is treated as a positive signal and the absence of one is treated as a negative or unknown signal. Classic approaches include popularity baselines, neighborhood-based collaborative filtering (using cosine or Jaccard similarity), and more recently, matrix factorization or neural methods (like BPR, LightFM, and graph-based recommenders). Our modeling approach was treating user reviews as implicit feedback and generating negative samples by selecting businesses the user has not reviewed. This is directly aligned with this line of work.</p>
-<p>Our results closely match patterns seen in the literature. The popularity baseline performs poorly for personalized prediction tasks, which is consistent with findings that global popularity cannot capture user-specific preferences. In contrast, our user-user collaborative filtering model significantly improves performance, particularly in precision, mirroring decades of work showing that neighborhood-based collaborative filtering is an effective method when user histories are meaningful and overlap is sufficient. The high precision but moderate recall we observe is also commonly reported in related studies: neighborhood methods are conservative and tend to make correct but selective predictions, whereas more advanced methods (for example: matrix factorization, neural recommenders, graph convolutional models) typically improve recall by generalizing beyond explicit overlap.</p>
-<p>Unlike some prior work using this dataset, our focus is not on multimodal modeling or text-based prediction, but rather on pure behavioral similarity through user interactions. Nonetheless, the strong performance of collaborative filtering aligns with the broader findings in the field that user–user similarity remains a powerful baseline and often outperforms naive popularity models. Our results differ from multimodal and text-based studies in that we do not incorporate semantic information such as review content, images, or business attributes. However, this also highlights an opportunity for future work: incorporating metadata or textual embeddings could help address the recall limitations of purely behavioral collaborative filtering, potentially bringing our results closer to those reported in more expressive models.</p>
+<h2 id="Conclusion-and-Discussion">Conclusion and Discussion<a class="anchor-link" href="#Conclusion-and-Discussion">¶</a></h2><p>The Google Local Reviews dataset has been widely used in recommender-systems research, especially for studying user behavior and leveraging text, images, and metadata to improve recommendations, as seen in prior work such as UCTopic (Li et al., 2022) and multimodal explanation models (Yan et al., 2022). While much of the literature focuses on rating prediction or explanation generation, many studies also address tasks similar to ours through implicit feedback modeling, where interactions like reviews serve as positives and unobserved items as negatives, using methods such as popularity baselines, neighborhood-based collaborative filtering, matrix factorization, and neural recommenders. Our approach follows this framework by treating user reviews as implicit signals and generating negative samples from unreviewed businesses. Our findings align with established results: popularity alone performs poorly for personalized prediction, while user–user collaborative filtering provides substantial gains, especially in precision, consistent with decades of evidence showing its effectiveness when users share meaningful behavioral overlap. Compared with multimodal or text-based approaches, our model relies solely on behavioral similarity, which explains its strong precision but moderate recall and also highlights future opportunities to incorporate metadata or textual representations to achieve more expressive performance.</p>
 </div>
 </div>
 </div>
